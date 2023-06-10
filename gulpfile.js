@@ -106,7 +106,7 @@ gulp.task("extract_api_docs_data", function (cb) {
 
 gulp.task("nanoc:compile", function (cb) {
   const { spawn } = require('child_process');
-  const compile = spawn('bundle', ['exec', 'nanoc', 'compile'], { stdio: 'inherit' });
+  const compile = spawn('bundle.cmd', ['exec', 'nanoc', 'compile'], { stdio: 'inherit' });
   compile.on('close', (code) => {
     console.log(`'bundle exec nanoc compile' exited with code ${code}`);
     cb();
